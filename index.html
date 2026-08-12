@@ -7,11 +7,19 @@
     <title>Ratish Kurup | Cloud & DevOps Engineer</title>
 
     <meta name="description"
-          content="Ratish Kurup is an IT professional with 16+ years of experience, focused on Cloud Engineering, DevOps, AWS, Kubernetes, Terraform, CI/CD and automation.">
+          content="Ratish Kurup - IT Professional with 16+ years of experience focused on Cloud Engineering, DevOps, AWS, Kubernetes, Terraform, CI/CD and automation.">
+
+    <meta name="keywords"
+          content="Ratish Kurup, Cloud Engineer, DevOps Engineer, AWS, Kubernetes, Terraform, CI/CD, Platform Engineer">
 
     <meta name="author" content="Ratish Kurup">
 
     <style>
+
+        /* ================================
+           GLOBAL
+        ================================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -24,474 +32,945 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background: #050b16;
+            color: #ffffff;
             line-height: 1.6;
-            color: #1f2937;
-            background: #ffffff;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .hero {
-            min-height: 90vh;
-            background: #0f172a;
-            color: white;
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
 
+        .blue {
+            color: #2875f2;
+        }
+
+        .section-label {
+            color: #2875f2;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+
+        /* ================================
+           NAVIGATION
+        ================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(3, 9, 19, 0.96);
+            border-bottom: 1px solid #182235;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            height: 70px;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+        }
 
-            text-align: center;
-            padding: 80px 20px;
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #2875f2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #d7dce5;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2875f2;
+        }
+
+        .resume-btn {
+            background: #2875f2;
+            padding: 11px 18px;
+            border-radius: 6px;
+            color: white !important;
+        }
+
+        .resume-btn:hover {
+            background: #1e60cf;
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: #2875f2;
+            opacity: 0.08;
+            filter: blur(120px);
+            right: 10%;
+            top: 100px;
         }
 
         .hero-content {
-            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            color: #3b82f6;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
         }
 
         .hero h1 {
-            font-size: 64px;
-            margin-bottom: 10px;
-            font-weight: 700;
-            letter-spacing: -2px;
-        }
-
-        .hero h2 {
-            font-size: 30px;
-            font-weight: 400;
-            color: #60a5fa;
+            font-size: 56px;
+            line-height: 1.1;
             margin-bottom: 25px;
         }
 
-        .hero p {
-            max-width: 850px;
-            margin: auto;
-            font-size: 20px;
-            color: #cbd5e1;
+        .hero-description {
+            color: #b7c0ce;
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
         }
 
         .hero-buttons {
-            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 28px;
-            margin: 8px;
-
+            padding: 14px 24px;
             border-radius: 6px;
-
-            text-decoration: none;
-            font-weight: 600;
-
+            font-weight: bold;
             transition: 0.3s;
         }
 
-        .btn-primary {
-            background: #2563eb;
-            color: white;
+        .primary-btn {
+            background: #2875f2;
         }
 
-        .btn-primary:hover {
-            background: #1d4ed8;
+        .primary-btn:hover {
+            background: #1559ca;
             transform: translateY(-2px);
         }
 
-        .btn-secondary {
-            border: 1px solid #64748b;
-            color: white;
+        .secondary-btn {
+            border: 1px solid #2875f2;
+            color: #ffffff;
         }
 
-        .btn-secondary:hover {
-            background: #1e293b;
+        .secondary-btn:hover {
+            background: #2875f2;
         }
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+        .social-links {
+            display: flex;
+            gap: 20px;
+            color: #c8d0dc;
+        }
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .social-links a:hover {
+            color: #2875f2;
+        }
 
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
 
+        /* ================================
+           PROFILE IMAGE
+        ================================= */
+
+        .profile-container {
             display: flex;
             justify-content: center;
-
-            padding: 18px;
+            position: relative;
         }
 
-        nav a {
-            color: #374151;
-            text-decoration: none;
-
-            margin: 0 22px;
-
-            font-weight: 600;
+        .profile-container::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 1px solid #2875f2;
+            box-shadow: 0 0 80px rgba(40,117,242,0.25);
         }
 
-        nav a:hover {
-            color: #2563eb;
+        .profile-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            border: 2px solid #2875f2;
         }
 
-        /* =========================
-           SECTIONS
-        ========================= */
+
+        /* ================================
+           TECHNOLOGY BAR
+        ================================= */
+
+        .tech-section {
+            padding: 25px 0;
+        }
+
+        .tech-container {
+            border: 1px solid #1c2a3d;
+            background: #08111e;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .tech-item {
+            color: #cbd5e1;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .tech-icon {
+            font-size: 25px;
+            display: block;
+            margin-bottom: 7px;
+            color: #2875f2;
+        }
+
+
+        /* ================================
+           ABOUT
+        ================================= */
 
         section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 90px 25px;
+            padding: 100px 0;
         }
-
-        section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #111827;
-        }
-
-        .section-intro {
-            font-size: 18px;
-            color: #6b7280;
-            max-width: 850px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 35px;
+            gap: 60px;
+            align-items: center;
         }
 
-        .about-card {
-            background: #f8fafc;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
+        .about-text p {
+            color: #aeb8c7;
+            margin-bottom: 20px;
+            font-size: 16px;
         }
 
-        .about-card h3 {
-            margin-bottom: 15px;
-            color: #111827;
-        }
-
-        /* =========================
-           CURRENT FOCUS
-        ========================= */
-
-        .focus {
-            background: #f8fafc;
-        }
-
-        .focus-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 90px 25px;
-        }
-
-        .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .about-highlights {
+            display: flex;
             gap: 25px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
-        .focus-card {
-            background: white;
-            border: 1px solid #e5e7eb;
+        .highlight {
+            color: #bfc8d5;
+            font-size: 14px;
+        }
+
+        .highlight strong {
+            display: block;
+            color: white;
+            font-size: 15px;
+        }
+
+        .stats-card {
+            background: #08111e;
+            border: 1px solid #1c2a3d;
+            border-radius: 12px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .stat {
             padding: 30px;
-            border-radius: 10px;
+            border-bottom: 1px solid #1c2a3d;
         }
 
-        .focus-card h3 {
-            margin-bottom: 10px;
-            color: #2563eb;
+        .stat:nth-child(odd) {
+            border-right: 1px solid #1c2a3d;
         }
 
-        /* =========================
+        .stat:nth-child(3),
+        .stat:nth-child(4) {
+            border-bottom: none;
+        }
+
+        .stat-number {
+            color: #2875f2;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .stat-text {
+            color: #aeb8c7;
+        }
+
+
+        /* ================================
            SKILLS
-        ========================= */
+        ================================= */
+
+        .skills {
+            background: #07101d;
+        }
 
         .skills-grid {
             display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #0a1422;
+            border: 1px solid #1c2a3d;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: #2875f2;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .skill-card p {
+            color: #9ca8b8;
+            font-size: 14px;
+        }
+
+
+        /* ================================
+           PROJECTS
+        ================================= */
+
+        .projects-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #08111e;
+            border: 1px solid #1c2a3d;
+            border-radius: 10px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #2875f2;
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #174eb0;
+            border-radius: 8px;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #9da9b9;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .project-link {
+            color: #2875f2;
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           EXPERIENCE
+        ================================= */
+
+        .experience {
+            background: #07101d;
+        }
+
+        .experience-card {
+            border-left: 3px solid #2875f2;
+            padding: 10px 30px;
+            margin-bottom: 35px;
+        }
+
+        .experience-card h3 {
+            font-size: 22px;
+        }
+
+        .experience-card h4 {
+            color: #2875f2;
+            margin: 5px 0;
+        }
+
+        .experience-card span {
+            color: #7f8da0;
+            font-size: 14px;
+        }
+
+        .experience-card p {
+            color: #aab5c4;
+            margin-top: 10px;
+        }
+
+
+        /* ================================
+           CERTIFICATIONS
+        ================================= */
+
+        .cert-grid {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin-top: 40px;
         }
 
-        .skill {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #e5e7eb;
+        .cert-card {
+            background: #08111e;
+            border: 1px solid #1c2a3d;
+            padding: 25px;
+            border-radius: 10px;
         }
 
-        .skill strong {
-            display: block;
-            margin-bottom: 8px;
+        .cert-card h3 {
+            margin-bottom: 10px;
         }
 
-        /* =========================
-           CTA
-        ========================= */
+        .cert-card p {
+            color: #9da9b9;
+            font-size: 14px;
+        }
 
-        .cta {
-            background: #0f172a;
-            color: white;
+
+        /* ================================
+           CONTACT
+        ================================= */
+
+        .contact {
             text-align: center;
-            max-width: none;
         }
 
-        .cta h2 {
-            color: white;
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #aeb8c7;
         }
 
-        .cta p {
-            color: #cbd5e1;
-            max-width: 700px;
-            margin: auto;
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
-        /* =========================
+
+        /* ================================
            FOOTER
-        ========================= */
+        ================================= */
 
         footer {
-            background: #020617;
-            color: #94a3b8;
+            border-top: 1px solid #182235;
+            padding: 30px 0;
             text-align: center;
-            padding: 30px;
+            color: #748094;
+            font-size: 14px;
         }
 
-        footer a {
-            color: #60a5fa;
-            text-decoration: none;
-        }
 
-        /* =========================
+        /* ================================
            MOBILE
-        ========================= */
+        ================================= */
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
 
             .hero h1 {
                 font-size: 42px;
             }
 
-            .hero h2 {
-                font-size: 24px;
+            .hero-buttons {
+                justify-content: center;
             }
 
-            .hero p {
-                font-size: 17px;
+            .social-links {
+                justify-content: center;
             }
 
-            nav {
-                flex-wrap: wrap;
-                gap: 10px;
+            .profile-image {
+                width: 300px;
+                height: 300px;
             }
 
-            nav a {
-                margin: 5px 10px;
+            .profile-container::before {
+                width: 320px;
+                height: 320px;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(5, 1fr);
             }
 
             .about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .focus-grid {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
+            .stats-card {
+                grid-template-columns: 1fr;
+            }
+
+            .stat:nth-child(odd) {
+                border-right: none;
+            }
+
+            .stat {
+                border-bottom: 1px solid #1c2a3d !important;
+            }
+
+            .stat:last-child {
+                border-bottom: none !important;
+            }
+
+            .about-highlights {
+                flex-direction: column;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- =========================
-         HERO
-    ========================== -->
 
-    <header class="hero">
+<!-- ======================================
+     NAVIGATION
+======================================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+                Ratish <span>Kurup</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+
+                <a href="#" class="resume-btn">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ======================================
+     HERO
+======================================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
 
         <div class="hero-content">
 
-            <h1>Ratish Kurup</h1>
+            <div class="hero-text">
 
-            <h2>Cloud & DevOps Engineer</h2>
+                <div class="hero-label">
+                    CLOUD & DEVOPS ENGINEER
+                </div>
 
-            <p>
-                IT professional with 16+ years of experience, currently focused on
-                Cloud Engineering, DevOps, AWS, Kubernetes, Terraform,
-                CI/CD and infrastructure automation.
-            </p>
+                <h1>
+                    Building Scalable
+                    <span class="blue">Cloud Solutions</span>
+                    &
+                    Automating Everything
+                </h1>
 
-            <div class="hero-buttons">
+                <p class="hero-description">
 
-                <a href="#projects" class="btn btn-primary">
-                    View Projects
-                </a>
+                    IT professional with 16+ years of experience,
+                    currently focused on Cloud Engineering, DevOps,
+                    AWS, Kubernetes, Terraform, CI/CD and
+                    infrastructure automation.
 
-                <a href="#contact" class="btn btn-secondary">
-                    Contact Me
-                </a>
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn primary-btn">
+                        View My Projects →
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        Contact Me ✉
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a href="#" target="_blank">
+                        GitHub
+                    </a>
+
+                    <a href="#" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:rati8039@gmail.com">
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-container">
+
+                <img
+                    src="profile.jpg"
+                    alt="Ratish Kurup - Cloud and DevOps Engineer"
+                    class="profile-image"
+                >
 
             </div>
 
         </div>
 
-    </header>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<!-- ======================================
+     TECHNOLOGIES
+======================================= -->
 
-    <nav>
+<section class="tech-section">
 
-        <a href="#about">About</a>
+    <div class="container">
 
-        <a href="#focus">Current Focus</a>
+        <div class="tech-container">
 
-        <a href="#skills">Skills</a>
+            <div class="tech-grid">
 
-        <a href="#projects">Projects</a>
+                <div class="tech-item">
+                    <span class="tech-icon">☁</span>
+                    AWS
+                </div>
 
-        <a href="#experience">Experience</a>
+                <div class="tech-item">
+                    <span class="tech-icon">◉</span>
+                    Linux
+                </div>
 
-        <a href="#contact">Contact</a>
+                <div class="tech-item">
+                    <span class="tech-icon">◆</span>
+                    Docker
+                </div>
 
-    </nav>
+                <div class="tech-item">
+                    <span class="tech-icon">◈</span>
+                    Kubernetes
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon">◇</span>
+                    Terraform
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon">⚙</span>
+                    GitHub Actions
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon">A</span>
+                    Ansible
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon">🐍</span>
+                    Python
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon">◉</span>
+                    Prometheus
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon">◉</span>
+                    Grafana
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
+<!-- ======================================
+     ABOUT
+======================================= -->
 
-    <section id="about">
+<section id="about">
 
-        <h2>About Me</h2>
-
-        <p class="section-intro">
-
-            I am an IT professional with more than 16 years of experience
-            across enterprise IT environments. My current career focus is
-            Cloud Engineering, DevOps and Platform Engineering.
-
-        </p>
+    <div class="container">
 
         <div class="about-grid">
 
-            <div class="about-card">
 
-                <h3>Professional Background</h3>
+            <div class="about-text">
+
+                <div class="section-label">
+                    ABOUT ME
+                </div>
+
+                <h2 class="section-title">
+                    Turning Ideas Into
+                    <span class="blue">
+                        Reliable Cloud Solutions
+                    </span>
+                </h2>
 
                 <p>
-                    Over the course of my career, I have worked in enterprise
-                    technology environments involving infrastructure,
-                    operations, asset management, process improvement and
-                    technology services.
-                </p>
 
-                <br>
+                    With over 16 years of experience in IT,
+                    I have worked across infrastructure management,
+                    automation and operations.
+
+                </p>
 
                 <p>
-                    I am now building deeper hands-on expertise in modern
-                    cloud-native technologies and automation.
+
+                    My current focus is on Cloud Engineering,
+                    DevOps, AWS, Kubernetes, Infrastructure as Code
+                    and CI/CD automation.
+
                 </p>
+
+                <p>
+
+                    I enjoy solving complex infrastructure problems,
+                    improving reliability and automating repetitive
+                    workflows to create scalable and efficient
+                    technology environments.
+
+                </p>
+
+
+                <div class="about-highlights">
+
+                    <div class="highlight">
+                        <strong>16+ Years</strong>
+                        IT Experience
+                    </div>
+
+                    <div class="highlight">
+                        <strong>Cloud Focused</strong>
+                        AWS, DevOps, IaC
+                    </div>
+
+                    <div class="highlight">
+                        <strong>Automation Driven</strong>
+                        CI/CD & Scripting
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <div class="about-card">
+            <div class="stats-card">
 
-                <h3>Career Direction</h3>
+                <div class="stat">
 
-                <p>
-                    My goal is to build and operate reliable, scalable and
-                    automated infrastructure using AWS, Kubernetes,
-                    Terraform, Linux and modern CI/CD practices.
-                </p>
+                    <div class="stat-number">
+                        16+
+                    </div>
 
-                <br>
-
-                <p>
-                    I am particularly interested in Cloud Engineer,
-                    DevOps Engineer and Platform Engineer opportunities.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CURRENT FOCUS
-    ========================== -->
-
-    <div class="focus" id="focus">
-
-        <div class="focus-container">
-
-            <h2>What I'm Currently Building</h2>
-
-            <p class="section-intro">
-
-                My current learning and project work is focused on developing
-                practical, production-oriented Cloud and DevOps skills.
-
-            </p>
-
-
-            <div class="focus-grid">
-
-                <div class="focus-card">
-
-                    <h3>AWS & Cloud</h3>
-
-                    <p>
-                        Designing cloud infrastructure using AWS services,
-                        networking, IAM, compute, storage and monitoring.
-                    </p>
+                    <div class="stat-text">
+                        Years of Experience
+                    </div>
 
                 </div>
 
 
-                <div class="focus-card">
+                <div class="stat">
 
-                    <h3>DevOps & CI/CD</h3>
+                    <div class="stat-number">
+                        10+
+                    </div>
 
-                    <p>
-                        Building automated CI/CD pipelines and improving
-                        software delivery through infrastructure and
-                        deployment automation.
-                    </p>
+                    <div class="stat-text">
+                        Projects
+                    </div>
 
                 </div>
 
 
-                <div class="focus-card">
+                <div class="stat">
 
-                    <h3>Infrastructure as Code</h3>
+                    <div class="stat-number">
+                        8+
+                    </div>
 
-                    <p>
-                        Using Terraform to provision repeatable,
-                        version-controlled cloud infrastructure.
-                    </p>
+                    <div class="stat-text">
+                        Technologies
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-number">
+                        100%
+                    </div>
+
+                    <div class="stat-text">
+                        Commitment
+                    </div>
 
                 </div>
 
@@ -501,192 +980,546 @@
 
     </div>
 
+</section>
 
-    <!-- =========================
-         SKILLS
-    ========================== -->
 
-    <section id="skills">
+<!-- ======================================
+     SKILLS
+======================================= -->
 
-        <h2>Technical Skills</h2>
+<section class="skills" id="skills">
 
-        <p class="section-intro">
-            Technologies I am actively learning, building with and
-            developing deeper hands-on expertise in.
-        </p>
+    <div class="container">
+
+        <div class="projects-header">
+
+            <div class="section-label">
+                TECHNICAL SKILLS
+            </div>
+
+            <h2 class="section-title">
+                Technologies I Work With
+            </h2>
+
+        </div>
 
 
         <div class="skills-grid">
 
-            <div class="skill">
-                <strong>Cloud</strong>
-                AWS
+
+            <div class="skill-card">
+
+                <h3>☁ Cloud</h3>
+
+                <p>
+                    AWS, EC2, S3, VPC, IAM, RDS,
+                    Load Balancing, Auto Scaling,
+                    CloudWatch and Cloud architecture.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>Operating Systems</strong>
-                Linux
+
+            <div class="skill-card">
+
+                <h3>⚙ DevOps</h3>
+
+                <p>
+                    CI/CD, GitHub Actions,
+                    Jenkins, deployment automation,
+                    release management and DevOps practices.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>Containers</strong>
-                Docker
+
+            <div class="skill-card">
+
+                <h3>◇ Infrastructure as Code</h3>
+
+                <p>
+                    Terraform, Ansible,
+                    infrastructure provisioning,
+                    configuration management and automation.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>Container Orchestration</strong>
-                Kubernetes
+
+            <div class="skill-card">
+
+                <h3>◈ Containers</h3>
+
+                <p>
+                    Docker, Kubernetes, Helm,
+                    Amazon EKS, container orchestration
+                    and microservices.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>Infrastructure as Code</strong>
-                Terraform
+
+            <div class="skill-card">
+
+                <h3>🐧 Linux</h3>
+
+                <p>
+                    Linux administration,
+                    Bash scripting, system troubleshooting,
+                    networking and server automation.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>CI/CD</strong>
-                GitHub Actions
+
+            <div class="skill-card">
+
+                <h3>🐍 Programming</h3>
+
+                <p>
+                    Python, Bash scripting,
+                    automation scripts and
+                    infrastructure tooling.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>Version Control</strong>
-                Git & GitHub
+
+            <div class="skill-card">
+
+                <h3>📊 Monitoring</h3>
+
+                <p>
+                    Prometheus, Grafana,
+                    CloudWatch, monitoring,
+                    logging and observability.
+                </p>
+
             </div>
 
-            <div class="skill">
-                <strong>Scripting</strong>
-                Bash & Python
-            </div>
 
-            <div class="skill">
-                <strong>Automation</strong>
-                Ansible
+            <div class="skill-card">
+
+                <h3>🔧 Version Control</h3>
+
+                <p>
+                    Git, GitHub, branching strategies,
+                    pull requests and collaborative
+                    software development workflows.
+                </p>
+
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         PROJECTS
-    ========================== -->
+<!-- ======================================
+     PROJECTS
+======================================= -->
 
-    <section id="projects">
+<section id="projects">
 
-        <h2>Projects</h2>
+    <div class="container">
 
-        <p class="section-intro">
+        <div class="projects-header">
 
-            Hands-on Cloud and DevOps projects demonstrating infrastructure
-            automation, deployment, scalability and operational practices.
+            <div class="section-label">
+                FEATURED PROJECTS
+            </div>
 
-        </p>
+            <h2 class="section-title">
+                Some Things I've Built
+            </h2>
 
-        <br>
-
-        <p>
-            <strong>Projects are currently being developed.</strong>
-            This section will showcase detailed architecture,
-            implementation, automation and GitHub repositories.
-        </p>
-
-    </section>
+        </div>
 
 
-    <!-- =========================
-         EXPERIENCE
-    ========================== -->
+        <div class="projects-grid">
 
-    <section id="experience">
 
-        <h2>Experience</h2>
+            <!-- PROJECT 1 -->
 
-        <p class="section-intro">
+            <div class="project-card">
 
-            16+ years of experience working in enterprise IT environments,
-            with a background spanning infrastructure operations,
-            technology services, asset management and process improvement.
+                <div class="project-icon">
+                    ☁
+                </div>
 
-        </p>
+                <h3>
+                    AWS 3-Tier Infrastructure
+                </h3>
 
-        <br>
+                <p>
 
-        <div class="about-card">
+                    Designed and deployed a highly available
+                    3-tier architecture on AWS using Terraform,
+                    including VPC, ALB, Auto Scaling and RDS.
 
-            <h3>Enterprise IT Experience</h3>
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Kubernetes Microservices
+                </h3>
+
+                <p>
+
+                    Deployed a scalable microservices application
+                    on Kubernetes using Helm, Ingress,
+                    ConfigMaps, Secrets and EKS.
+
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    CI/CD Automation Pipeline
+                </h3>
+
+                <p>
+
+                    Built CI/CD pipelines using GitHub Actions
+                    for automated testing, Docker image creation
+                    and deployment to AWS.
+
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    ◇
+                </div>
+
+                <h3>
+                    Infrastructure Automation
+                </h3>
+
+                <p>
+
+                    Automated infrastructure provisioning and
+                    configuration management using Terraform,
+                    Ansible and Bash scripting.
+
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 5 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Cloud Monitoring & Observability
+                </h3>
+
+                <p>
+
+                    Implemented monitoring and observability
+                    using Prometheus, Grafana and AWS CloudWatch
+                    for infrastructure and applications.
+
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT 6 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🐧
+                </div>
+
+                <h3>
+                    Linux Automation
+                </h3>
+
+                <p>
+
+                    Developed Bash and Python automation scripts
+                    for server administration, health checks,
+                    deployments and operational tasks.
+
+                </p>
+
+                <a href="#" class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================
+     EXPERIENCE
+======================================= -->
+
+<section class="experience" id="experience">
+
+    <div class="container">
+
+        <div class="section-label">
+            EXPERIENCE
+        </div>
+
+        <h2 class="section-title">
+            Professional Journey
+        </h2>
+
+
+        <div class="experience-card">
+
+            <h3>
+                IT Consultant
+            </h3>
+
+            <h4>
+                Garfield Health Solutions / Kaiser Permanente
+            </h4>
+
+            <span>
+                Current Role
+            </span>
 
             <p>
-                Experience working within large-scale enterprise environments,
-                collaborating with technical teams, managing operational
-                processes and improving service delivery.
-            </p>
 
-            <br>
+                Working in IT infrastructure and asset management
+                with responsibilities involving enterprise systems,
+                operational processes, automation and technology
+                management.
 
-            <p>
-                Currently expanding this experience into Cloud Engineering,
-                DevOps and Platform Engineering through structured learning
-                and hands-on projects.
             </p>
 
         </div>
 
-    </section>
+
+        <div class="experience-card">
+
+            <h3>
+                Infrastructure & IT Operations
+            </h3>
+
+            <h4>
+                16+ Years of IT Experience
+            </h4>
+
+            <span>
+                Professional Experience
+            </span>
+
+            <p>
+
+                Experience across infrastructure operations,
+                enterprise IT environments, server management,
+                automation, troubleshooting and technology
+                operations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+<!-- ======================================
+     CERTIFICATIONS
+======================================= -->
 
-    <section class="cta" id="contact">
+<section id="certifications">
 
-        <h2>Let's Connect</h2>
+    <div class="container">
+
+        <div class="projects-header">
+
+            <div class="section-label">
+                CERTIFICATIONS & LEARNING
+            </div>
+
+            <h2 class="section-title">
+                Continuous Learning
+            </h2>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+
+            <div class="cert-card">
+
+                <h3>AWS Cloud</h3>
+
+                <p>
+                    Building expertise in AWS cloud architecture,
+                    networking, security and scalable infrastructure.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>DevOps Engineering</h3>
+
+                <p>
+                    Hands-on learning across Linux, Git,
+                    Docker, Kubernetes, Terraform and CI/CD.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>Cloud & Platform Engineering</h3>
+
+                <p>
+                    Focused on modern platform engineering,
+                    automation, infrastructure as code
+                    and cloud-native technologies.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================
+     CONTACT
+======================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-label">
+            GET IN TOUCH
+        </div>
+
+        <h2 class="section-title">
+            Let's Build Something Great
+        </h2>
 
         <p>
-            I am interested in Cloud Engineering, DevOps and Platform
-            Engineering opportunities and professional networking.
+
+            I'm interested in Cloud Engineering, DevOps,
+            Platform Engineering and infrastructure automation
+            opportunities.
+
+            If you're working on something interesting,
+            let's connect.
+
         </p>
 
-        <div class="hero-buttons">
 
-            <a href="mailto:rati8039@gmail.com"
-               class="btn btn-primary">
+        <div class="contact-buttons">
+
+            <a
+                href="mailto:your-email@example.com"
+                class="btn primary-btn">
+
                 Email Me
+
             </a>
 
-            <a href="linkedin.com/in/ratish-ku"
-               class="btn btn-secondary"
-               target="_blank">
+
+            <a
+                href="#"
+                class="btn secondary-btn"
+                target="_blank">
+
                 LinkedIn
-            </a>
 
-            <a href="https://github.com/ratishku"
-               class="btn btn-secondary"
-               target="_blank">
-                GitHub
             </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+<!-- ======================================
+     FOOTER
+======================================= -->
 
-    <footer>
+<footer>
 
-        <p>
-            © 2026 Ratish Kurup. All rights reserved.
-        </p>
+    <div class="container">
 
-        <p>
-            Cloud & DevOps Engineering
-        </p>
+        © 2026 Ratish Kurup.
+        Cloud & DevOps Engineer.
 
-    </footer>
+    </div>
+
+</footer>
+
 
 </body>
 </html>
